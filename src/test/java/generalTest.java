@@ -30,18 +30,27 @@ public class generalTest {
         page = new generalPages(driver);
 
         page.clickPizza();
+        Assert.assertTrue(page.isPagePizza(),"Wrong page");
         page.clickPromo();
+        Assert.assertTrue(page.isPagePromotions(),"Wrong page");
         page.clickBurg();
+        Assert.assertTrue(page.isPageBurgers(),"Wrong page");
         page.clickSalad();
+        Assert.assertTrue(page.isPageSalads(),"Wrong page");
         page.clickHot();
+        Assert.assertTrue(page.isPageHotDishes(),"Wrong page");
         page.clickDrink();
+        Assert.assertTrue(page.isPageDrinks(),"Wrong page");
         page.clickBreakf();
+        Assert.assertTrue(page.isPageBreakfasts(),"Wrong page");
         page.clickDessert();
+        Assert.assertTrue(page.isPageDesserts(),"Wrong page");
         page.clickChild();
+        Assert.assertTrue(page.isPageChildMenu(),"Wrong page");
         page.clickLunch();
+        Assert.assertTrue(page.isPageLunchMenu(),"Wrong page");
         page.clickCutlery();
-        log.info("User is logged in");
-//        Assert.assertTrue(page.isPassReg(),"Wrong page");
+        Assert.assertTrue(page.isPageCutlery(),"Wrong page");
     }
 
     @AfterMethod

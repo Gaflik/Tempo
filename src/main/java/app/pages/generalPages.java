@@ -24,13 +24,13 @@ public class generalPages {
     private By pageDrinks = By.xpath("//*[contains(text(),'Напитки')]");
     private By menuBreakfasts = By.xpath("//a[@href='https://www.pizzatempo.by/menu/zavtraki.html']");
     private By pageBreakfasts = By.xpath("//*[contains(text(),'Завтраки c 10.00 до 11.45')]");
-    private By menuDesserts = By.xpath("//a[@href='https://www.pizzatempo.by/menu/napitki.html']");
+    private By menuDesserts = By.xpath("//a[@href='https://www.pizzatempo.by/menu/dessert.html']");
     private By pageDesserts = By.xpath("//*[contains(text(),'Десерты')]");
     private By menuChildMenu = By.xpath("//a[@href='https://www.pizzatempo.by/menu/deti.html']");
     private By pageChildMenu = By.xpath("//*[contains(text(),'Детское меню')]");
     private By menuLunchMenu = By.xpath("//a[@href='https://www.pizzatempo.by/menu/obed.html']");
     private By pageLunchMenu = By.xpath("//*[contains(text(),'Обеденное меню ПН-ПТ с 12.00 до 16.00')]");
-    private By menuCutlery = By.xpath("//button[@href='https://www.pizzatempo.by/menu/pribori.html']");
+    private By menuCutlery = By.xpath("//a[@href='https://www.pizzatempo.by/menu/pribori.html']");
     private By pageCutlery = By.xpath("//*[contains(text(),'Приборы')]");
 
     public generalPages clickPizza() {
