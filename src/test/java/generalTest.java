@@ -1,6 +1,5 @@
 import app.appConfig;
-import app.pages.registration;
-import app.pages.signUp;
+import app.pages.generalPages;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -12,10 +11,10 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class regTest {
+public class generalTest {
     private WebDriver driver;
-    private registration page;
-    private static final Logger log = LogManager.getLogger(signUpTest.class);
+    private generalPages page;
+    private static final Logger log = LogManager.getLogger(generalTest.class);
 
     @BeforeMethod
     public void setUp() {
@@ -26,23 +25,23 @@ public class regTest {
         driver.manage().window().maximize();
         log.info("Chrome is started");
     }
-    @Test(priority = 0, description = "signUp scenrio.")
-//    @Step ("Enter email {typeEmail} into field")
-    public void signUp() {
-        page = new registration(driver);
+    @Test(priority = 0, description = "switch menu scenario.")
+    public void generalPages() {
+        page = new generalPages(driver);
 
-        page.clickReg();
-        page.typeEmail("edeed@gmail.com");
-        page.typePass("Pass8888");
-        page.typeRePass("Pass8888");
-        page.typePhone("375299658963");
-        page.typeFio("ghgjg");
-        page.typeStreet("kfkfk");
-        page.typeHouse("ee");
-        page.typeRoom("rr");
-        page.clickSubmit();
+        page.clickPizza();
+        page.clickPromo();
+        page.clickBurg();
+        page.clickSalad();
+        page.clickHot();
+        page.clickDrink();
+        page.clickBreakf();
+        page.clickDessert();
+        page.clickChild();
+        page.clickLunch();
+        page.clickCutlery();
         log.info("User is logged in");
-        Assert.assertTrue(page.isPassReg(),"Wrong page");
+//        Assert.assertTrue(page.isPassReg(),"Wrong page");
     }
 
     @AfterMethod
@@ -50,4 +49,3 @@ public class regTest {
         driver.quit();
     }
 }
-

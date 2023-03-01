@@ -1,6 +1,7 @@
 package app.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -47,6 +48,7 @@ public class registration {
     }
 
     public registration typePhone(String phone) {
+        driver.findElement(phoneField).sendKeys(Keys.HOME);
         driver.findElement(phoneField).sendKeys(phone);
         return this;
     }
